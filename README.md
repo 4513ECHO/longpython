@@ -25,19 +25,8 @@ optional arguments:
 
 ## Installation
 
-### Use pip
-
 ```sh
 pip install git+https://github.com/4513ECHO/longpython
-```
-
-### Use via curl
-
-You can write wrapper shell script like below:
-
-```sh:longpython
-#!/bin/sh
-curl -fsSL https://github.com/4513ECHO/longpython/raw/main/main.py | python3 -
 ```
 
 ## Derived Projects
