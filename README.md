@@ -11,7 +11,7 @@ $ longpython
    \ \
    / /
    \ \ _ ,
-    \\___/
+    \___/
 
 $ longpython -h
 usage: longpython [-h] [-l INT]
