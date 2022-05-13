@@ -1,3 +1,5 @@
+"""CLI tool to print long python."""
+
 import argparse
 from textwrap import dedent
 
@@ -10,7 +12,7 @@ HEAD = dedent(
 ).strip("\n")
 BODY = (
     "   / /",
-    r"   \\ \\",
+    r"   \ \ ".rstrip(),
 )
 TAIL = dedent(
     r"""
@@ -21,6 +23,7 @@ TAIL = dedent(
 
 
 def parse_args() -> argparse.Namespace:
+    """Parse CLI arguments."""
     parser = argparse.ArgumentParser(
         prog="longpython",
         description="CLI tool to print long python",
@@ -37,6 +40,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    """Print an ascii art of python."""
     args = parse_args()
     print(HEAD)
     for x in range(args.length):
