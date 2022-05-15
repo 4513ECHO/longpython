@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "longpython"
+version = "0.0.0"
+description = "CLI tool to print long python"
+authors = ["Hibiki(4513ECHO) <4513echo@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/4513ECHO/longpython"
+packages = [
+  { include = "longpython" },
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython"
+]
+
+[tool.poetry.scripts]
+longpython = "longpython.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.16.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+py_version = 37
+profile = "black"
+
+[tool.mypy]
+py_version = 37
+show_error_codes = true
+pretty = true
+strict = true
+
+[tool.black]
+line-length = 88
