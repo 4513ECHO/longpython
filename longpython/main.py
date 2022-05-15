@@ -22,6 +22,13 @@ TAIL = dedent(
 ).strip("\n")
 
 
+def check_natural(v: str) -> int:
+    v_int = int(v)
+    if v_int < 0:
+        raise argparse.ArgumentTypeError("length should be greater than or equal to 0.")
+    return v_int
+
+
 def parse_args() -> argparse.Namespace:
     """Parse CLI arguments."""
     parser = argparse.ArgumentParser(
@@ -32,7 +39,7 @@ def parse_args() -> argparse.Namespace:
         "-l",
         "--length",
         metavar="INT",
-        type=int,
+        type=check_natural,
         default=1,
         help="length of python (default: %(default)r)",
     )
@@ -42,13 +49,16 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     """Print an ascii art of python."""
     args = parse_args()
-    print(HEAD)
+    lines = []
+    lines.append(HEAD)
     for x in range(args.length):
-        print(BODY[x % 2])
-    if x % 2 == 1:
-        print(TAIL.format(" "))
+        lines.append(BODY[x % 2])
+    if len(lines) % 2 == 1:
+        lines.append(TAIL.format(" "))
     else:
-        print(TAIL.format(""))
+        lines.append(TAIL.format(""))
+
+    print("\n".join(lines))
 
 
 if __name__ == "__main__":
