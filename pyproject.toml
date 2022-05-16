@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "longpython"
-version = "0.0.0"
+version = "0.0.1"
 description = "CLI tool to print long python"
 authors = ["Hibiki(4513ECHO) <4513echo@gmail.com>"]
 license = "MIT"
+readme = "README.md"
 repository = "https://github.com/4513ECHO/longpython"
 packages = [
   { include = "longpython" },
