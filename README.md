@@ -4,32 +4,29 @@
 
 ## Usage
 
-```
-usage: main.py [-h] [-l LENGTH]
+```shellsession
+$ longpython
+  _
+(" ヽ
+   \ \
+   / /
+   \ \ _ ,
+    \___/
+
+$ longpython -h
+usage: longpython [-h] [-l INT]
 
 CLI tool to print long python
 
 optional arguments:
   -h, --help            show this help message and exit
-  -l LENGTH, --length LENGTH
-                        length of python
+  -l INT, --length INT  length of python (default: 1)
 ```
 
 ## Installation
 
-### Download file
-
-You have to only download [this file](./main.py).
-
-**NOTE:** python must be 3.7 or later.
-
-### Use via curl
-
-You can write wrapper shell script like below:
-
-```sh:longpython
-#!/bin/sh
-curl -fsSL https://github.com/4513ECHO/longpython/raw/main/main.py | python3 -
+```sh
+pip install git+https://github.com/4513ECHO/longpython
 ```
 
 ## Derived Projects
