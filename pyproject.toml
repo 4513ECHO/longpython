@@ -18,7 +18,8 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: Implementation :: CPython"
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Typing :: Typed"
 ]
 
 [tool.poetry.scripts]
@@ -28,16 +29,19 @@ longpython = "longpython.main:main"
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.16.0"
-isort = "^5.10.1"
-black = "^22.3.0"
-mypy = "^0.950"
-flake8 = "^4.0.1"
-pyproject-flake8 = "^0.0.1-alpha.4"
+black = "^22.6.0"
+isort = "^5.10.0"
+mypy = "^0.971"
+flake8 = "^5.0.0"
+flake8-pyproject = "^1.1.0"
+pre-commit = "^2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
 
 [tool.isort]
 py_version = 37
@@ -49,11 +53,6 @@ show_error_codes = true
 pretty = true
 strict = true
 
-[tool.black]
-line-length = 88
-
 [tool.flake8]
 indent-size = 4
 max-line-length = 120
-extend-ignore = "W605,"
-
