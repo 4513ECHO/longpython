@@ -46,19 +46,23 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def main() -> None:
-    """Print an ascii art of python."""
-    args = parse_args()
+def generate_python(length: int) -> str:
+    """Return an ascii art of python."""
     lines = []
     lines.append(HEAD)
-    for x in range(args.length):
+    for x in range(length):
         lines.append(BODY[x % 2])
     if len(lines) % 2 == 1:
         lines.append(TAIL.format(" "))
     else:
         lines.append(TAIL.format(""))
+    return "\n".join(lines)
 
-    print("\n".join(lines))
+
+def main() -> None:
+    """Print an ascii art of python."""
+    args = parse_args()
+    print(generate_python(args.length))
 
 
 if __name__ == "__main__":
