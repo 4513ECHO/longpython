@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "longpython"
-version = "0.0.1"
+version = "0.0.2"
 description = "CLI tool to print long python"
 authors = ["Hibiki(4513ECHO) <4513echo@gmail.com>"]
 license = "MIT"
@@ -48,7 +48,7 @@ py_version = 37
 profile = "black"
 
 [tool.mypy]
-py_version = 37
+python_version = "3.7"
 show_error_codes = true
 pretty = true
 strict = true
