@@ -27,6 +27,8 @@ optional arguments:
 
 ## Installation
 
+longpython requires python 3.9 or later.
+
 ### Via pipx (recommended)
 
 I recommend using [pipx](https://github.com/pypa/pipx) to install this project.
