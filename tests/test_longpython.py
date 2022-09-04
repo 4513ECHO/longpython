@@ -15,8 +15,14 @@ def test_zero() -> None:
 
 
 def test_even() -> None:
-    assert generate_python(4) == '  _\n(" ヽ\n   \\ \\\n   / /\n   \\ \\\n   / /\n   \\ \\\n    \\ \\ _ ,\n     \\___/'
+    assert (
+        generate_python(4)
+        == '  _\n(" ヽ\n   \\ \\\n   / /\n   \\ \\\n   / /\n   \\ \\\n    \\ \\ _ ,\n     \\___/'
+    )
 
 
 def test_odd() -> None:
-    assert generate_python(3) == '  _\n(" ヽ\n   \\ \\\n   / /\n   \\ \\\n   / /\n   \\ \\ _ ,\n    \\___/'
+    assert (
+        generate_python(3)
+        == '  _\n(" ヽ\n   \\ \\\n   / /\n   \\ \\\n   / /\n   \\ \\ _ ,\n    \\___/'
+    )
