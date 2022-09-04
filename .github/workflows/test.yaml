@@ -1,0 +1,32 @@
+---
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: poetry
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install --no-interaction
+      - name: Run lint
+        run: |
+          poetry run black --check longpython/ tests/
+          poetry run isort --check longpython/ tests/
+          poetry run mypy longpython/ tests/
+          poetry run flake8 longpython/ tests/
+      - name: Run tests
+        run: |
+          poetry run pytest tests/
