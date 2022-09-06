@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "longpython"
-version = "0.0.2"
+version = "0.1.0"
 description = "CLI tool to print long python"
 authors = ["Hibiki(4513ECHO) <4513echo@gmail.com>"]
 license = "MIT"
