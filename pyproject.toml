@@ -2,7 +2,7 @@
 name = "longpython"
 version = "0.1.0"
 description = "CLI tool to print long python"
-authors = ["Hibiki(4513ECHO) <4513echo@gmail.com>"]
+authors = ["Hibiki(4513ECHO) <mail@4513echo.dev>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/4513ECHO/longpython"
